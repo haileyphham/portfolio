@@ -9,10 +9,10 @@
     --text-color-second: #473f34;
     --text-color-third: #8c9657;
 
-    --first-color: rgb(110, 87, 224);
-    --first-color-hover: rgb(40, 91, 212);
+    --first-color: #8c9657;
+    --first-color-hover: #C1B09A;
 
-    --second-color: rgb(0, 201, 255);
+    --second-color: #8c9657;
     --third-color: rgb(192, 166, 49);
     --first-shadow-color: rgba(0, 0, 0, 0.1);
 
@@ -382,7 +382,7 @@ h3{
 }
 .project-box>i{
     font-size: 50px;
-    color: #00B5E7;
+    color: #88B046;
     margin-bottom: 25px;
 }
 .project-box label{
@@ -488,7 +488,7 @@ textarea{
     color: var(--color-white);
 }
 .form-button>.btn:hover{
-    background: #00B5E7;
+    background: #C1B09A ;
 }
 .form-button i{
     font-size: 18px;
@@ -508,6 +508,7 @@ footer{
 .top-footer p{
     font-size: 25px;
     font-weight: 600;
+    color: var(--text-color-);
 }
 .middle-footer .footer-menu{
     display: flex;
