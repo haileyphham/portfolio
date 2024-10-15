@@ -1,0 +1,5 @@
+title: Hailey Pham Portfolio
+description: My portfolio website in HTML/CSS/JS
+baseurl: "/haileypham.github.io" # or set to "/<repository-name>" if necessary
+url: "https://haileyphham.github.io/haileypham.github.io/" # Change this to your GitHub Pages URL
+theme: jekyll-theme-primer # Specify your theme if desired
