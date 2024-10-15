@@ -3,11 +3,11 @@
 
 /* ----- VARIABLES ----- */
 :root{
-    --body-color: rgb(250, 250, 250);
-    --color-white: rgb(255, 255, 255);
+    --body-color: #f0e5c7;
+    --color-white: #f0e5c7;
 
-    --text-color-second: rgb(68, 68, 68);
-    --text-color-third: rgb(30, 159, 171);
+    --text-color-second: #473f34;
+    --text-color-third: #8c9657;
 
     --first-color: rgb(110, 87, 224);
     --first-color-hover: rgb(40, 91, 212);
@@ -17,6 +17,7 @@
     --first-shadow-color: rgba(0, 0, 0, 0.1);
 
 }
+
 
 /* ----- BASE ----- */
 *{
@@ -501,7 +502,7 @@ footer{
     align-items: center;
     flex-direction: column;
     row-gap: 30px;
-    background: #F8F8F8;
+    background: #f0e5c7;
     padding-block: 40px 60px;
 }
 .top-footer p{
