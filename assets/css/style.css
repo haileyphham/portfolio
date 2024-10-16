@@ -55,7 +55,7 @@ html{
 .btn{
     font-weight: 500;
     padding: 12px 20px;
-    background: #efefef;
+    background: #C1B09A;
     border: none;
     border-radius: 10px;
     cursor: pointer;
@@ -95,6 +95,7 @@ nav{
     padding-inline: 9vw;
     transition: .3s;
     z-index: 100;
+    
 }
 .nav-logo{
    position: relative;
@@ -120,10 +121,13 @@ nav{
 }
 .nav-link{
     text-decoration: none;
-    color: var(--text-color-second);
+    color: var(--text-color-second); 
     font-weight: 500;
     padding-inline: 15px;
     margin-inline: 20px;
+}
+.nav-link:hover {
+    color: var(--white-color); 
 }
 .nav-menu-btn{
     display: none;
@@ -138,7 +142,7 @@ nav{
     transition: .3;
 }
 .active-link::after{
-    content: '';
+ 
     position: absolute;
     left: 50%;
     bottom: -15px;
@@ -149,6 +153,19 @@ nav{
     border-radius: 50%;
 }
 
+.download-btn {
+    text-decoration: none; /* Remove underline */
+    color: var(--text-color-second); /* Dark brown color */
+    font-weight: 500; /* Match the button font-weight */
+    padding: 12px 20px; /* Match the button padding */
+    border-radius: 10px; /* Match the button border radius */
+    background: #C1B09A; /* Background color */
+    transition: color 0.4s; /* Smooth transition */
+}
+
+.download-btn:hover {
+    color: var(--color-white); /* Change color on hover */
+}
 
 /* ----- WRAPPER DESIGN ----- */
 .wrapper{
@@ -188,7 +205,7 @@ nav{
     margin-block: 20px;
 }
 .typedText{
-    text-transform: capitalize;
+    text-transform: none;
     color: var(--text-color-third);
 }
 .featured-text-info{
@@ -207,10 +224,19 @@ nav{
 .featured-text-btn>.blue-btn:hover{
     background: var(--first-color-hover);
 }
+.featured-text-btn a {
+    text-decoration: none; /* Remove underline */
+    color: var(--text-color-second); /* Dark brown color */
+}
+
+.featured-text-btn a:hover {
+    color: var(--color-white); /* Change color on hover */
+}
 .social_icons{
     display: flex;
     margin-top: 5em;
     gap: 30px;
+
 }
 .icon{
     display: flex;
@@ -221,6 +247,7 @@ nav{
     border-radius: 50%;
     box-shadow: 0px 2px 5px 0px rgba(0, 0, 0, 0.25);
     cursor: pointer;
+    color: var(--text-color-second);
 }
 .icon:hover{
     color: var(--first-color);
@@ -300,7 +327,7 @@ nav{
     margin-bottom: 10px;
 }
 .top-header span{
-    color: #999;
+    color: #7a6e5f;
 }
 h3{
     font-size: 20px;
@@ -325,17 +352,17 @@ h3{
 .about-info p{
     text-align: center;
     font-size: 15px;
-    color: #777;
+    color: #7a6e5f;
 }
-.about-btn button{
+.about-btn a{
     position: absolute;
-    right: 20px;
+    right: 70px;
     bottom: 20px;
     background: var(--first-color);
     color: var(--color-white);
     border-radius: 30px;
 }
-.about-btn button:hover{
+.about-btn a:hover{
     background: var(--first-color-hover);
 }
 
@@ -359,37 +386,114 @@ h3{
     border-radius: 5px;
 }
 
+/* ----- TIMELINE SECTION ----- */
+.timeline-section {
+    position: relative;
+    padding: 5em 0; /* Adjusted padding */
+}
+
+.timeline-section::before {
+    content: '';
+    position: absolute;
+    left: 50%;
+    top: 0;
+    bottom: -15px;
+    width: 3px; /* Line width */
+    background: var(--text-color-third);
+    transform: translateX(-50%);
+}
+
+/* ----- EXPERIENCE LIST ----- */
+.timeline-list {
+    display: flex;
+    flex-direction: column;
+    gap: 30px;
+}
+
+/* ----- TIMELINE ITEM ----- */
+.timeline-item {
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start; /* Align items to the start */
+    width: 45%; /* Adjust width for boxes */
+    background: var(--first-color);
+    color: var(--color-white);
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 1px 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+.timeline-item::after {
+    content: none;
+    position: absolute;
+    right: -15px; /* Position dot on the right side */
+    top: 20px; /* Center the dot vertically */
+    width: 10px; /* Dot size */
+    height: 10px; /* Dot size */
+    background: var(--text-color-third);
+    border-radius: 50%;
+    box-shadow: 0 0 5px rgba(0, 0, 0, 0.5);
+}
+
+/* Adjust item position based on order */
+.timeline-item:nth-child(odd) {
+    align-self: flex-start; /* Left side */
+}
+
+.timeline-item:nth-child(even) {
+    align-self: flex-end; /* Right side */
+}
+
+.timeline-date {
+    font-size: 12px;
+    color: var(--text-color-third);
+    margin-top: auto;
+}
+
+
 /* ----- PROJECTS BOX ----- */
-.project-container{
+.project-container {
     display: flex;
     width: 100%;
     justify-content: space-between;
     gap: 20px;
     flex-wrap: wrap;
 }
-.project-box{
+
+.project-box {
     position: relative;
     display: flex;
     justify-content: center;
     align-items: center;
     flex-direction: column;
     width: 30%;
-    height: 250px;
+    height: auto;
     background: var(--color-white);
     border-radius: 20px;
     box-shadow: 1px 8px 10px 2px var(--first-shadow-color);
     overflow: hidden;
+    padding: 20px;
+    transition: transform 0.3s; /* Smooth scaling effect */
 }
-.project-box>i{
-    font-size: 50px;
-    color: #88B046;
-    margin-bottom: 25px;
+.project-image {
+    position: relative; /* Ensure the image is positioned properly */
+    z-index: 2; /* Make sure it's above the overlay */
 }
-.project-box label{
+.project-image img {
+    width: 300px; /* Full width */
+    height: 400px; /* Maintain aspect ratio */
+    max-height: 220px; /* Set a maximum height */
+    object-fit: cover; /* Ensure the image covers the area */
+    border-radius: 10px; /* Round corners */
+}
+
+.project-box label {
     font-size: 15px;
-    color: #777;
+    color: #7a6e5f;
 }
-.project-box::after, .contact-info::after{
+
+.project-box::after {
     content: "";
     position: absolute;
     bottom: -100%;
@@ -399,16 +503,84 @@ h3{
     transition: .4s;
     z-index: 1;
 }
-.project-box:hover.project-box::after,
-.contact-info:hover.contact-info::after{
-    bottom: 0;
+
+.project-box:hover {
+    transform: scale(1.05); /* Slightly scale up on hover */
 }
-.project-box:hover.project-box i,
-.project-box:hover.project-box>h3,
-.project-box:hover.project-box>label{
-    color: var(--color-white);
-    z-index: 2;
+
+.project-box:hover::after {
+    bottom: 0; /* Show the overlay on hover */
 }
+
+.project-box:hover h3,
+.project-box:hover label {
+    color: var(--color-white); /* Change text color on hover */
+    z-index: 2; /* Bring text above the overlay */
+}
+
+/* Ensure the image remains visible */
+.project-box:hover .project-image img {
+    opacity: 1; /* Keep the image fully visible */
+    transition: opacity 0.3s ease; /* Optional: smooth transition */
+}
+
+
+.modal {
+    display: none; /* Hidden by default */
+    position: fixed; /* Stay in place */
+    z-index: 1000; /* Sit on top */
+    left: 0;
+    top: 0;
+    width: 100%; /* Full width */
+    height: 100%; /* Full height */
+    overflow: auto; /* Enable scroll if needed */
+    background-color: rgb(0,0,0); /* Fallback color */
+    background-color: rgba(0,0,0,0.4); /* Black w/ opacity */
+}
+
+.modal-content {
+    background-color: var(--first-color);
+    margin: 15% auto; /* 15% from the top and centered */
+    padding: 20px;
+    border: 1px solid none;
+    width: 40%; /* Could be more or less, depending on screen size */
+    border-radius: 15px; /* Rounded corners */
+    color: #f0e5c7;
+}
+
+#modal-title {
+    color: #f0e5c7; /* Change to your preferred color for the title */
+    font-size: 1.5em; /* Optional: adjust size */
+}
+
+#modal-description {
+    color: #f0e5c7; /* Change to your preferred color for the description */
+    font-size: 1em; /* Optional: adjust size */
+}
+
+#modal-link {
+    color: #4b5d2a ; /* Change to your preferred color for the link */
+    text-decoration: none; /* Remove underline */
+    font-weight: bold; /* Optional: make it bold */
+}
+
+#modal-link:hover {
+    text-decoration: underline; /* Optional: underline on hover */
+}
+.close {
+    color:  var(--first-color-hover);
+    float: right;
+    font-size: 28px;
+    font-weight: bold;
+}
+
+.close:hover,
+.close:focus {
+    color: #f0e5c7;
+    text-decoration: none;
+    cursor: pointer;
+}
+
 
 /* ----- CONTACT BOX ----- */
 .contact-info{
@@ -424,6 +596,7 @@ h3{
     border-radius: 10px;
     box-shadow: 1px 8px 10px 2px var(--first-shadow-color);
     overflow: hidden;
+
 }
 .contact-info>h2{
     color: var(--color-white);
@@ -445,55 +618,10 @@ h3{
 .contact-info:hover.contact-info h2,
 .contact-info:hover.contact-info p,
 .contact-info:hover.contact-info i{
-    color: #777;
+    color: #7a6e5f;
     z-index: 2;
 }
 
-/* ----- CONTACT FORM ----- */
-.form-control{
-    display: flex;
-    flex-direction: column;
-    gap: 10px;
-    width: 100%;
-}
-.form-inputs{
-    display: flex;
-    gap: 10px;
-    width: 100%;
-}
-.input-field{
-    width: 50%;
-    height: 55px;
-    background: transparent;
-    border: 2px solid #AAA;
-    border-radius: 10px;
-    padding-inline: 20px;
-    outline: none;
-}
-textarea{
-    width: 100%;
-    height: 250px;
-    background: transparent;
-    border: 2px solid #AAA;
-    border-radius: 10px;
-    padding: 15px 20px;
-    outline: none;
-    resize: none;
-}
-.form-button>.btn{
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    background: var(--second-color);
-    color: var(--color-white);
-}
-.form-button>.btn:hover{
-    background: #C1B09A ;
-}
-.form-button i{
-    font-size: 18px;
-    rotate: -45deg;
-}
 
 /* ----- FOOTER BOX ----- */
 footer{
@@ -529,6 +657,11 @@ footer{
 .bottom-footer{
     font-size: 14px;
     margin-top: 10px;
+}
+.bottom-footer a{
+    font-size: 14px;
+    margin-top: 10px;
+    color: var(--first-color);
 }
 
 

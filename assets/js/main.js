@@ -28,7 +28,7 @@ function headerShadow() {
 
 /* ----- TYPING EFFECT ----- */
 var typingEffect = new Typed(".typedText", {
-  strings: ["a Software Developer", "a Student", "a Data Analyst", "passionate about learning"],
+  strings: ["a software developer", "a data analyst", "a student", "passionate about learning"],
   loop: true,
   typeSpeed: 100,
   backSpeed: 80,
@@ -52,34 +52,48 @@ sr.reveal('.social_icons', { delay: 200 });
 sr.reveal('.featured-image', { delay: 300 });
 
 /* -- PROJECT BOX -- */
-sr.reveal('.project-box', { interval: 200 });
+/* --sr.reveal('.project-box', { interval: 200 });
 
 /* -- HEADINGS -- */
 sr.reveal('.top-header', {});
 
+function openPopup(box) {
+  const modal = document.getElementById('project-modal');
+  const modalTitle = document.getElementById('modal-title');
+  const modalDescription = document.getElementById('modal-description');
+  const modalLink = document.getElementById('modal-link');
+
+  // Get the data attributes from the clicked box
+  const title = box.getAttribute('data-title');
+  const description = box.getAttribute('data-description');
+  const link = box.getAttribute('data-link');
+
+  // Set the modal content
+  modalTitle.textContent = title;
+  modalDescription.textContent = description;
+  modalLink.href = link;
+
+  // Show the modal
+  modal.style.display = "block";
+}
+
+// Close modal when clicking on the close button
+document.querySelector('.close').onclick = function() {
+  document.getElementById('project-modal').style.display = "none";
+}
+
+// Close modal when clicking outside of it
+window.onclick = function(event) {
+  const modal = document.getElementById('project-modal');
+  if (event.target === modal) {
+      modal.style.display = "none";
+  }
+}
+
+
+
 /* ----- ## -- SCROLL REVEAL LEFT_RIGHT ANIMATION -- ## ----- */
 
-/* -- ABOUT INFO & CONTACT INFO -- */
-const srLeft = ScrollReveal({
-  origin: 'left',
-  distance: '80px',
-  duration: 2000,
-  reset: true
-});
-
-srLeft.reveal('.about-info', { delay: 100 });
-srLeft.reveal('.contact-info', { delay: 100 });
-
-/* -- ABOUT SKILLS & FORM BOX -- */
-const srRight = ScrollReveal({
-  origin: 'right',
-  distance: '80px',
-  duration: 2000,
-  reset: true
-});
-
-srRight.reveal('.skills-box', { delay: 100 });
-srRight.reveal('.form-control', { delay: 100 });
 
 /* ----- CHANGE ACTIVE LINK ----- */
 const sections = document.querySelectorAll('section[id]');
@@ -102,33 +116,3 @@ function scrollActive() {
 
 window.addEventListener('scroll', scrollActive);
 
-/* ----- TOGGLE DARK MODE ----- */
-const themeToggleBtn = document.getElementById("theme-toggle");
-
-// Set initial theme based on stored preference
-const currentTheme = localStorage.getItem('theme') || 'light';
-document.documentElement.setAttribute('data-theme', currentTheme);
-
-themeToggleBtn.addEventListener('click', () => {
-  let newTheme;
-  
-  if (currentTheme === 'dark') {
-    newTheme = 'light';
-  } else {
-    newTheme = 'dark';
-  }
-
-  document.documentElement.setAttribute('data-theme', newTheme);
-  localStorage.setItem('theme', newTheme); // Store the preference
-
-  // Update currentTheme variable for future clicks
-  currentTheme = newTheme;
-
-  console.log(`Theme changed to: ${newTheme}`); // Debugging statement
-
-  document.documentElement.style.transition = 'none'; // Disable transition for immediate effect
-  setTimeout(() => {
-    document.documentElement.style.transition = ''; // Re-enable transition
-  }, 0);
-
-});
