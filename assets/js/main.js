@@ -28,7 +28,7 @@ function headerShadow() {
 
 /* ----- TYPING EFFECT ----- */
 var typingEffect = new Typed(".typedText", {
-  strings: ["a software developer", "a data analyst", "a student", "passionate about learning"],
+  strings: ["an aspiring software developer", "an aspiring ML engineer", "a student", "passionate about learning"],
   loop: true,
   typeSpeed: 100,
   backSpeed: 80,
@@ -50,6 +50,7 @@ sr.reveal('.featured-text-info', { delay: 200 });
 sr.reveal('.featured-text-btn', { delay: 200 });
 sr.reveal('.social_icons', { delay: 200 });
 sr.reveal('.featured-image', { delay: 300 });
+sr.reveal('.gif-container', { delay: 200 });
 
 /* -- PROJECT BOX -- */
 /* --sr.reveal('.project-box', { interval: 200 });
