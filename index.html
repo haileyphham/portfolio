@@ -1,327 +1,126 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-
-    <!-- --------- UNICONS ---------- -->
-    <link rel="stylesheet" href="https://unicons.iconscout.com/release/v4.0.8/css/line.css">
-
-    <!-- --------- CSS ---------- -->
-    <link rel="stylesheet" href="assets/css/style.css">
-
-    <!-- --------- FAVICON ---------- -->
-    <link rel="shortcut icon" href="assets/images/favicon.png" type="image/x-icon">
-
-    <title>Portfolio | Hailey Pham</title>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Hailey Pham | Portfolio</title>
+  <link rel="stylesheet" href="assets/css/main.css">
 </head>
+
 <body>
-   <div class="container">
-    <!-- --------------- HEADER --------------- -->
-      <nav id="header">
-        <div class="nav-logo">
-            <p class="nav-name">Hailey Pham</p>
-            
-        </div>
-        <div class="nav-menu" id="myNavMenu">
-            <ul class="nav_menu_list">
-                <li class="nav_list">
-                    <a href="#home" class="nav-link active-link">Home</a>
-                    <div class="circle"></div>
-                </li>
-                <li class="nav_list">
-                    <a href="#about" class="nav-link">About</a>
-                    <div class="circle"></div>
-                </li>
-                <li class="nav_list"></li>
-                    <a href="#experience" class="nav-link">Experience</a>
-                    <div class="circle"></div>
-                </li>
-                <li class="nav_list">
-                    <a href="#projects" class="nav-link">Projects</a>
-                    <div class="circle"></div>
-                </li>
-                <li class="nav_list">
-                    <a href="#contact" class="nav-link">Contact</a>
-                    <div class="circle"></div>
-                </li>
-            </ul>
-        </div>
-        <div class="nav-button">
-            <a href="assets/images/[hailey pham] resume 2024.pdf" download class="btn download-btn">Download CV <i class="uil uil-import"></i></a>
-        </div>
-        <div class="nav-menu-btn">
-            <i class="uil uil-bars" onclick="myMenuFunction()"></i>
-        </div>
-      </nav>
 
-
-    <!-- -------------- MAIN ---------------- -->
-    <main class="wrapper">
-       <!-- -------------- FEATURED BOX ---------------- -->
-
-       <section class="featured-box" id="home">
-          <div class="featured-text">
-            <div class="featured-name">
-                <p>I'm <span class="typedText"></span></p>
-            </div>
-            <div class="featured-text-info">
-                <p>Hi! I'm Hailey, a 3rd year at UC Berkeley studying Computer Science and Data Science with an emphasis in Economics. I am currently interested in pursuing software development and ML/AI projects and roles.
-                     Outside of my professional experiences, I lead student software projects and encourage younger students in low-income areas to pursue careers in technology. When I’m not coding, I love playing volleyball, weightlifting, and exploring different arts and crafts!
-                </p>
-            </div>
-            <div class="featured-text-btn">
-                <a href="assets/images/[hailey pham] resume 2024.pdf" download class="btn">Download CV <i class="uil uil-import"></i></a>
-            </div>
-            <div class="social_icons">
-                <a href="https://www.linkedin.com/in/haileyphham" target="_blank" class="icon">
-                    <i class="uil uil-linkedin-alt"></i>
-                </a>
-                <a href="https://github.com/haileyphham" target="_blank" class="icon">
-                    <i class="uil uil-github-alt"></i>
-                </a>
-            </div>
-          </div>
-          <div class="featured-image">
-            <div class="image">
-                <img src="assets/images/avatar.png" alt="avatar">
-            </div>
-            
+  <section class="hero">
+    <p>&lt;hi there, i’m&gt;</p>
+    <div class="hero-header">
+        <h1>
+            <span class="first-name">hailey</span><br>
+            <span class="last-name">pham.</span>
     
-          </div>
+        </h1>
         
+        <img src="assets/images/miffy.png" alt="" class="hero-img top-left">
+        <img src="assets/images/hirono.png" alt="" class="hero-img top-right">
+        <img src="assets/images/orchid.png" alt="" class="hero-img bottom-left">
+        <img src="assets/images/keychain.png" alt="" class="hero-img bottom-right">
 
-       </section>
-       <div class="gif-container">
-            <img src="assets/images/smiski_website.gif" alt="A fun GIF" />
-        </div>
-
-       <!-- -------------- ABOUT BOX ---------------- -->
-       <section class="section" id="about">
-          <div class="top-header">
-            <h1>About Me</h1>
-          </div>
-          <div class="row">
-            <div class="col">
-                <div class="about-info">
-                    <h3>My Blurb</h3>
-                    <p>I have a deep passion for problem-solving and creating ethical, secure software. In my previous roles, I developed AI/ML models and security solutions that helped build innovative platforms for thousands of users. I also dabble in full-stack development and security architecture. These experiences allowed me to transform complex ideas into reality while effectively communicating and collaborating across diverse teams and management levels. My commitment to continuous learning pushes me to develop both my technical and interpersonal skills.
-                        
-                        
-                    </p>
-                    <div class="about-btn">
-                        <a href="assets/images/[hailey pham] resume 2024.pdf" download class="btn download-btn">Download CV <i class="uil uil-import"></i></a>
-                    </div>
-                </div>
-            </div>
-            <div class="col">
-                <div class="skills-box">
-                    <div class="skills-header">
-                        <h3>Languages/Scripts</h3>
-                    </div>
-                    <div class="skills-list">
-                        <span>Java</span>
-                        <span>Python</span>
-                        <span>C/C++</span>
-                        <span>SQL</span>
-                        <span>R</span>
-                        <span>HTML/CSS</span>
-                        <span>Javascript</span>
-                        <span>Typescript</span>
-                    </div>
-                </div>
-                
-                <div class="skills-box">
-                    <div class="skills-header">
-                        <h3>Frameworks/Libraries</h3>
-                    </div>
-                    <div class="skills-list">
-                        <span>React</span>
-                        <span>Vue</span>
-                        <span>Next.js</span>
-                        <span>Node.js</span>
-                        <span>Flask</span>
-                        <span>WordPress</span>
-                        <span>Pandas</span>
-                        <span>NumPy</span>
-                        <span>Seaborn</span>
-                        <span>Matplotlib</span>
-                        <span>Three.js</span>
-                        <span>Vitest</span>
-                        <span>Vite</span>
-
-                    </div>
-                </div>
-                <div class="skills-box">
-                    <div class="skills-header">
-                        <h3>Developer Tools</h3>
-                    </div>
-                    <div class="skills-list">
-                        <span>Git</span>
-                        <span>IntelliJ IDEA</span>
-                        <span>VS Code</span>
-                        <span>Jupyter</span>
-                        <span>GitHub</span>
-                        <span>JIRA</span>
-                        <span>MySQL</span>
-                        <span>AWS</span>
-                        <span>Figma</span>
-                        <span>Adobe Creative Cloud</span>
-                        <span>Procreate</span>
-                        <span>UI/UX</span>
-
-                    </div>
-                </div>
-            </div>
-          </div>
-       </section>
-
-       <!-- -------------- EXPERIENCE BOX ---------------- -->
-       <section class="section" id="experience">
-        <div class="top-header">
-            <h1>Experience</h1>
-        </div>
-        <div class="timeline-section">
-            <div class="timeline-list">
-                <div class="timeline-item">
-                    <h3>AI/Machine Learning Engineer Intern</h3>
-                    <span>NASA | June 2024 - Present</span>
-                    <p>skills: React, Vite, Storybook, ML, NLP, LLM, llama3, Python</p>
-                </div>
-                <div class="timeline-item">
-                    <h3>Project Leader / Software Developer</h3>
-                    <span>DebaterHub | July 2024 - Present</span>
-                    <p>skills: Vue, Three.js</p>
-                </div>
-                <div class="timeline-item">
-                    <h3>Cyber Security Intern</h3>
-                    <span>Bank of America | May 2023 - August 2023</span>
-                    <p>skills: ML, Python, R, Pandas, NLP</p>
-                </div>
-                <div class="timeline-item">
-                    <h3>Computer Science Instructor</h3>
-                    <span>UC Berkeley ANova | Spring 2023 - Present</span>
-                    <p>skills: Python, HTML/CSS, JavaScript, Teaching, Mentorship</p>
-                </div>
-            </div>
-        </div>
-     </section>
-
-
-
-       <!-- -------------- PROJECT BOX ---------------- -->
-       <section class="section" id="projects">
-        <div class="top-header">
-            <h1>Projects</h1>
-        </div>
-        <div class="project-container">
-            <div class="project-box" data-title="Planet Exploration" data-description="Three.js simulation of the solar system" data-link="https://github.com/haileyphham/planet-exploration" onclick="openPopup(this)">
-                <div class="project-image">
-                    <img src="assets/images/planet.png" alt="avatar">
-                </div>
-                <h3>Planet Exploration</h3>
-                <label>Three.js simulation of the solar system</label>
-            </div>
+    </div>
+    <div class="tag">
+        <p>software</p>
+        <p >developer</p>
+    </div>
     
-            <div class="project-box" data-title="Phi Sigma Rho Website" data-description="Web application using React.js and Vite" data-link="https://github.com/haileyphham/websitephirho" onclick="openPopup(this)">
-                <div class="project-image">
-                    <img src="assets/images/phirho.png" alt="avatar">
-                </div>
-                <h3>Phi Sigma Rho Website</h3>
-                <label>Web application using React.js and Vite</label>
-            </div>
-    
-            <div class="project-box" data-title="Prescription Tracker App" data-description="Mobile app in React Native that tracks medication" data-link="https://github.com/haileyphham/prescription-tracker-app" onclick="openPopup(this)">
-                <div class="project-image">
-                    <img src="assets/images/pill-tracker.png" alt="avatar">
-                </div>
-                <h3>Prescription Tracker App</h3>
-                <label>Mobile app in React Native that tracks medication</label>
-            </div>
-        </div>
-        
-        <div id="project-modal" class="modal">
-            <div class="modal-content">
-                <span class="close">&times;</span>
-                <h2 id="modal-title">Project Title</h2>
-                <p id="modal-description">Project description goes here.</p>
-                <a id="modal-link" href="#" target="_blank">View Project</a>
-            </div>
-        </div>
-    </section>
     
 
-       <!-- -------------- CONTACT BOX ---------------- -->
+    
 
-       <section class="section" id="contact">
-          <div class="top-header">
-            <h1>Get in touch</h1>
-            <span>Feel free to reach out to me about any inquires or oportunities</span>
-          </div>
-          <div class="row">
-             <div class="col">
-                <div class="contact-info">
-                    <h2>Contact Me <i class="uil uil-corner-right-down"></i></h2>
-                    <p><i class="uil uil-envelope"></i> Email: haikleyy@berkeley.edu</p>
-                    <p><i class="uil uil-phone"></i> Tel: (669)-213-9970</p>
-                </div>
-             </div>
-             <img src="assets/images/work.png" alt="work simiski" class="contact-image">
-          </div>
-       </section>
+    <!-- Button Row -->
+    <div class="hero-buttons">
+        <a href="#about" class="oval-btn">about me</a>
+        <a href="#experience" class="oval-btn">my experience</a>
+        <a href="#projects" class="oval-btn">projects</a>
+    </div>
 
-    </main>
+    <div class="social-links">
+        <a href="https://github.com/" target="_blank">
+            <svg class="social-icon"><use href="icons.svg#github"></use></svg>
+        </a>
 
-
-    <!-- --------------- FOOTER --------------- -->
-    <footer>
-        <div class="top-footer">
-            <p>Hailey Pham</p>
-        </div>
-        <div class="middle-footer">
-            <ul class="footer-menu">
-                <li class="footer_menu_list">
-                    <a href="#home">Home</a>
-                </li>
-                <li class="footer_menu_list">
-                    <a href="#about">About</a>
-                </li>
-                <li class="footer_menu_list">
-                    <a href="#experience">Experience</a>
-                </li>
-                <li class="footer_menu_list">
-                    <a href="#projects">Projects</a>
-                </li>
-                <li class="footer_menu_list">
-                    <a href="#contact">Contact</a>
-                </li>
-            </ul>
-        </div>
-        <div class="social_icons">
-            <a href="https://www.linkedin.com/in/haileyphham" target="_blank" class="icon">
-                <i class="uil uil-linkedin-alt"></i>
-            </a>
-            <a href="https://github.com/haileyphham" target="_blank" class="icon">
-                <i class="uil uil-github-alt"></i>
-            </a>
-        </div>
-        <div class="bottom-footer">
-            <p>Copyright &copy; <a href="#home" style="text-decoration: none;">Hailey Pham</a> - All rights reserved</p>
-        </div>
-    </footer>
-
+        <a href="https://linkedin.com/" target="_blank">
+            <svg class="social-icon"><use href="icons.svg#linkedin"></use></svg>
+        </a>
     </div>
 
 
+    </section>
 
+  <section id="about">
+    <h2>about me.</h2>
+    <p>
+      I’m a fourth-year Computer Science and Data Science student at UC Berkeley.
+      I have experience in developing full-stack applications, AI/ML systems, and
+      secure software solutions.
+    </p>
+    <p>My experience ranges from internships at NASA to contract projects for
+        companies like Samsung Research America along with health
+        corporations and education platforms. I have a strong foundation in 
+        algorithms, databases, and systems and am passionate about reliable,
+        secure, and scalable software.
+    </p>
+    <p>
+      In my previous roles I have developed a RAG chatbot targeted to 100,000+
+      users, optimized web scrapers for research discovery, and created a 
+      scheduling portal that improved workflows for hospital staff. Learn
+      more about my experience here!
+    <p>
+      When I’m not coding, I love learning 3D design and printing. I’m also passionate
+      about teaching Computer Science to underrepresented students in the Bay Area.
+      I love volleyball, cooking, and matcha.
+    </p>
+  </section>
 
-    <!-- ----- TYPING JS Link ----- -->
-    <script src="https://unpkg.com/typed.js@2.0.16/dist/typed.umd.js"></script>
+  <section id="experience">
+    <h2>my experience</h2>
+    <div class="job">
+      <h3>Samsung Research America (contract) — Jul 2025–Present</h3>
+      <p>Built a web scraping system for 30+ university research sites using BeautifulSoup & LangChain.</p>
+    </div>
+    <div class="job">
+      <h3>Northeast Valley Health Corporation — Jan 2025–May 2025</h3>
+      <p>Developed a scheduling portal (React, Express, PostgreSQL, Docker) improving hospital workflows.</p>
+    </div>
+    <div class="job">
+      <h3>NASA AI/ML Software Developer Intern — Jun 2024–Dec 2024</h3>
+      <p>Created a RAG chatbot with LLMs/NLP for 100k+ Aviation Incident Report users.</p>
+    </div>
+    <div class="job">
+      <h3>DebaterHub — Jul 2024–Jan 2025</h3>
+      <p>Frontend dev using Three.js & Vue for an interactive debate simulation platform.</p>
+    </div>
+  </section>
 
-       <!-- ----- SCROLL REVEAL JS Link----- -->
-    <script src="https://unpkg.com/scrollreveal"></script>
+  <section id="projects">
+    <h2>my projects</h2>
+    <div class="project">
+      <h3>Sister Dates</h3>
+      <p>
+        Full-stack React Native app with Express + PostgreSQL.
+        Matches org members weekly using survey + task pairing algorithm.
+      </p>
+    </div>
+  </section>
 
-    <!-- ----- MAIN JS ----- -->
-    <script src="assets/js/main.js"></script>
+  <section id="contact">
+    <h2>contact me</h2>
+    <p>email: <a href="mailto:haikleyy@berkeley.edu">haikleyy@berkeley.edu</a></p>
+    <p>phone: <a href="tel:+16692139970">+1 (669) 213-9970</a></p>
+    <p>
+      <a href="https://linkedin.com">LinkedIn</a> ·
+      <a href="https://github.com">GitHub</a>
+    </p>
+  </section>
+
+  <footer>
+    <p>© 2025 Hailey Pham</p>
+  </footer>
 </body>
 </html>

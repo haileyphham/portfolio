@@ -1,0 +1,32 @@
+.oval-btn {
+  padding: 0.6rem 1.5rem;
+  border: 2px solid #657d39;
+  border-radius: 999px; /* makes it oval */
+  text-decoration: none;
+  color: #fff4c5;
+  font-family: "JetBrains Mono", monospace;
+  transition: all 0.3s ease;
+}
+
+.oval-btn:hover {
+  background: #657d39;
+  color: #fff4c5;
+}
+
+.social-links {
+  margin-top: 1.5rem;
+  display: flex;
+  justify-content: center;
+  gap: 1.5rem;
+}
+.social-icon {
+  width: 28px;
+  height: 28px;
+  fill: #657d39; 
+  transition: transform 0.2s ease, fill 0.2s ease;
+}
+
+.social-icon:hover {
+  transform: scale(1.2);
+  fill: #657d39; 
+}
