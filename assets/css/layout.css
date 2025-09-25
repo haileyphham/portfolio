@@ -47,3 +47,30 @@ section {
 #contact a:hover {
   text-decoration: underline;
 }
+.orb {
+  position: absolute;
+  top: -400px;
+  left: 100px;
+  width: 700px;
+  height: 700px;
+  pointer-events: none;
+  z-index: 5;
+
+  background: radial-gradient(
+    circle,
+    rgba(255, 244, 197, 0.7) 0%,   /* bright center */
+    rgba(102, 204, 255, 0) 70%     /* fades to nothing */
+  );
+}
+.orb-right {
+    position: absolute;
+  top: 450px;   /* adjust so it's between hero and about */
+  left: 1150px;
+  width: 800px;
+  height: 800px;
+  background: radial-gradient(
+    circle,
+    rgba(255, 244, 197, 0.7) 0%, /* softer cyan glow */
+    rgba(102, 204, 255, 0) 70%
+  );
+}

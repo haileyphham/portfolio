@@ -5,6 +5,7 @@
   flex-direction: column;   /* stack children vertically */
   align-items: center;      /* center horizontally */
   padding-top: 12rem; 
+  
 }
 .hero > p {
   font-size: 1.5rem;
@@ -27,13 +28,12 @@
 }
 
 .tag {
-  display: inline-block;    /* shrink to content */
+  display: inline-block;   
   margin-top: 0.5rem;
   padding: 0.8rem 2rem;
-  border: 2px solid #111;
-  border-radius: 999px;     /* pill shape */
+
   font-family: "JetBrains Mono", monospace;
-  font-size: 1.2rem;
+  font-size: 1.5rem;
 }
 
 .hero h1 {
@@ -96,6 +96,22 @@
     left: -410px;
     transform: rotate(-15deg);
 }
+.hero-img.matcha {
+    width: 200px;   /* increase size here */
+    height: auto;   
+    top: -270px;
+    left: -210px;
+    transform: rotate(5deg);
+    z-index: 7;
+}
+.hero-img.bigstar {
+    width: 370px;   /* increase size here */
+    height: auto;   
+    top: -100px;
+    left: -180px;
+    z-index: -1;
+
+}
 .hero-img.mango {
     width: 90px;   /* increase size here */
     height: auto;   
@@ -111,11 +127,33 @@
     left: -90px;
     transform: rotate(-10deg);
 }
+.hero-img.littlestar {
+    width: 70px;   /* increase size here */
+    height: auto; 
+    top: 340px;
+    left: 60px;
+    transform: rotate(10deg);
+}
 .hero-img.smiski {
     width: 350px;   /* increase size here */
     height: auto; 
     top: 90px;
     right: -430px;
+    z-index: 4;
+}
+.hero-img.polariod {
+    width: 370px;   /* increase size here */
+    height: auto; 
+    top: -160px;
+    right: -375px;
+}
+.hero-img.smallstar {
+    width: 90px;   /* increase size here */
+    height: auto; 
+    top: 180px;
+    right: -110px;
+    z-index: 14;
+    transform: rotate(-10deg);
 }
 .hero-img.shoes {
     width: 220px;   /* increase size here */
