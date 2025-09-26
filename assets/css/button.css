@@ -1,6 +1,6 @@
 .oval-btn {
   padding: 0.6rem 1.5rem;
-  border: 2px solid #657d39;
+  border: 1px solid #657d39;
   border-radius: 999px; /* makes it oval */
   text-decoration: none;
   color: #fff4c5;
@@ -29,4 +29,22 @@
 .social-icon:hover {
   transform: scale(1.2);
   fill: #657d39; 
+}
+
+
+
+/* 📱 Tablet and smaller */
+@media (max-width: 768px) {
+  .oval-btn {
+    font-size: 1rem;
+    padding: 0.5rem 1.2rem;
+  }
+}
+
+/* 📱 Mobile */
+@media (max-width: 430px) {
+  .oval-btn {
+    font-size: 0.5rem;
+    padding: 0.4rem 1rem;
+  }
 }

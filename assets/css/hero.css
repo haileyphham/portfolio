@@ -1,48 +1,45 @@
+/* =========================
+   HERO BASE STYLES
+   ========================= */
 .hero {
   text-align: center;
   color: #fff4c5;
   display: flex;
-  flex-direction: column;   /* stack children vertically */
-  align-items: center;      /* center horizontally */
-  padding-top: 12rem; 
-  
+  flex-direction: column;
+  align-items: center;
+  padding-top: 12rem;
 }
+
 .hero > p {
   font-size: 1.5rem;
   font-family: "JetBrains Mono", monospace;
-  margin-bottom: 1rem;
+  margin-bottom: -0.5rem;
   color: #fff4c5;
-
-  text-align: right;     /* override the center */
-  width: 100%;           /* make it span full width so right-align works */
-  display: block;        /* ensures it behaves like a block element */
-  padding-right: 8rem;          /* match theme */
-  margin-bottom: -0.5rem;    
+  text-align: right;
+  width: 100%;
+  padding-right: 8rem;
 }
 
 .hero-header {
   position: relative;
-  display: inline-block;    /* keeps images positioned around name */
-  margin-bottom: 1rem;      /* space between name and tag */
-  
+  display: inline-block;
+  margin-bottom: 1rem;
 }
 
 .tag {
-  display: inline-block;   
+  display: inline-block;
   margin-top: 0.5rem;
   padding: 0.8rem 2rem;
-
   font-family: "JetBrains Mono", monospace;
   font-size: 1.5rem;
 }
 
 .hero h1 {
   font-family: "Young Serif", serif;
-  font-size: 11rem;      
+  font-size: 11rem;
   margin: 0.5rem 0;
-  line-height: 0.8; 
+  line-height: 0.8;
 }
-
 
 .hero h2 {
   font-size: 1.2rem;
@@ -62,110 +59,69 @@
   gap: 1rem;
 }
 
-
-
+/* =========================
+   HERO IMAGES (desktop defaults)
+   ========================= */
 .hero-img {
   position: absolute;
-  width: 50px;  /* adjust size */
   height: auto;
-  z-index: 0;   /* behind the text */
+  z-index: 0;
 }
 
-/* Positioning examples */
-.hero-img.miffy {
-    position: absolute;
-    width: 120px;   /* increase size here */
-    height: auto;   /* keeps proportions */
-    z-index: 0;
-    top: 210px;
-    left: -400px;
-    transform: scaleX(-1);
+/* left side */
+.hero-img.miffy { width: 120px; top: 210px; left: -400px; transform: scaleX(-1); }
+.hero-img.hirono { width: 350px; top: 140px; left: -350px; }
+.hero-img.orchid { width: 240px; top: -90px; left: -410px; transform: rotate(-15deg); }
+.hero-img.matcha { width: 200px; top: -270px; left: -210px; transform: rotate(5deg); z-index: 7; }
+.hero-img.bigstar { width: 370px; top: -100px; left: -180px; z-index: -1; }
+.hero-img.mango { width: 90px; bottom: 130px; left: -190px; transform: rotate(-5deg); }
+.hero-img.keychain { width: 130px; top: 230px; left: -90px; transform: rotate(-10deg); }
+.hero-img.littlestar { width: 70px; top: 340px; left: 60px; transform: rotate(10deg); }
+
+/* right side */
+.hero-img.smiski { width: 350px; top: 90px; right: -430px; z-index: 4; }
+.hero-img.polariod { width: 370px; top: -190px; right: -375px; }
+.hero-img.smallstar { width: 90px; top: 180px; right: -110px; z-index: 14; transform: rotate(-10deg); }
+.hero-img.shoes { width: 220px; top: 250px; right: -130px; transform: rotate(-15deg); }
+.hero-img.miffy-keychain { width: 90px; top: 320px; right: -200px; transform: rotate(15deg); }
+
+/* =========================
+   RESPONSIVE BREAKPOINTS
+   ========================= */
+
+/* Tablets (≤1024px) */
+@media (max-width: 1024px) {
+  .hero { padding-top: 8rem; }
+  .hero > p { font-size: 1.2rem; padding-right: 4rem; }
+  .hero h1 { font-size: 8rem; }
+  .tag { font-size: 1.2rem; padding: 0.6rem 1.2rem; }
+  .hero-img { transform: scale(0.8); }
 }
 
-.hero-img.hirono {
-    top: 140px;
-    left: -350px;
-    width: 350px;   /* increase size here */
-    height: auto;  
+/* Phones (≤768px) */
+@media (max-width: 768px) {
+  .hero { padding-top: 6rem; }
+  .hero > p { font-size: 1rem; padding-right: 2rem; text-align: center; }
+  .hero h1 { font-size: 5rem; }
+  .tag { font-size: 1rem; padding: 0.4rem 1rem; }
+  .hero-img { transform: scale(0.6); }
 }
 
-.hero-img.orchid {
-    width: 240px;   /* increase size here */
-    height: auto;   
-    top: -90px;
-    left: -410px;
-    transform: rotate(-15deg);
-}
-.hero-img.matcha {
-    width: 200px;   /* increase size here */
-    height: auto;   
-    top: -270px;
-    left: -210px;
-    transform: rotate(5deg);
-    z-index: 7;
-}
-.hero-img.bigstar {
-    width: 370px;   /* increase size here */
-    height: auto;   
-    top: -100px;
-    left: -180px;
-    z-index: -1;
+/* Extra small (≤430px) – custom overrides */
+@media (max-width: 430px) {
+  .hero h1 { font-size: 3.5rem; }
+  .tag { font-size: 0.9rem; }
 
-}
-.hero-img.mango {
-    width: 90px;   /* increase size here */
-    height: auto;   
-    bottom: 130px;
-    left: -190px;
-    transform: rotate(-5deg);
-}
-
-.hero-img.keychain {
-    width: 130px;   /* increase size here */
-    height: auto; 
-    top: 230px;
-    left: -90px;
-    transform: rotate(-10deg);
-}
-.hero-img.littlestar {
-    width: 70px;   /* increase size here */
-    height: auto; 
-    top: 340px;
-    left: 60px;
-    transform: rotate(10deg);
-}
-.hero-img.smiski {
-    width: 350px;   /* increase size here */
-    height: auto; 
-    top: 90px;
-    right: -430px;
-    z-index: 4;
-}
-.hero-img.polariod {
-    width: 370px;   /* increase size here */
-    height: auto; 
-    top: -160px;
-    right: -375px;
-}
-.hero-img.smallstar {
-    width: 90px;   /* increase size here */
-    height: auto; 
-    top: 180px;
-    right: -110px;
-    z-index: 14;
-    transform: rotate(-10deg);
-}
-.hero-img.shoes {
-    width: 220px;   /* increase size here */
-    height: auto; 
-    top: 250px;
-    right: -130px;
-    transform: rotate(-15deg);
-}
-.hero-img.miffy-keychain {
-    width: 90px;   /* increase size here */
-    height: auto; 
-    top: 320px;
-    right: -200px;
-    transform: rotate(15deg);
+  .hero-img.bigstar { width: 400px; top: 50%; left: 50%; transform: translate(-50%, -50%); z-index: -1; }
+  .hero-img.hirono { width: 80px; top: 140%; left: -50%; transform: translate(-50%, -50%); }
+  .hero-img.orchid { width: 80px; top: 50%; left: -50%; transform: translate(-50%, -50%) rotate(-8deg); }
+  .hero-img.matcha { width: 80px; top: -120px; right: 120px; left: auto; transform: rotate(5deg) scale(0.9); z-index: 5; }
+  .hero-img.mango { width: 40px; top: -30%; left: -40%; transform: translate(-50%, -50%) rotate(-5deg); }
+  .hero-img.keychain { width: 60px; top: 100%; left: -10%; transform: translate(-50%, -50%) rotate(-5deg); }
+  .hero-img.littlestar { width: 25px; top: 160%; left: 19%; transform: translate(-50%, -50%) rotate(-8deg); }
+  .hero-img.smiski { width: 190px; top: -30%; left: 90%; z-index: 17; }
+  .hero-img.polariod { width: 100px; top: -70%; left: 110%; transform: rotate(5deg); z-index: 15; }
+  .hero-img.smallstar { width: 40px; top: 60%; left: 130%; transform: translate(-50%, -50%) rotate(-8deg); }
+  .hero-img.shoes { width: 70px; top: 110%; left: 100%; transform: translate(-50%, -50%) rotate(-8deg); }
+  .hero-img.miffy-keychain { width: 35px; top: 130%; left: 140%; transform: translate(-50%, -50%) rotate(-8deg); }
 }
