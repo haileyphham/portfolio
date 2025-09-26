@@ -69,6 +69,7 @@
   height: auto;
   overflow: visible;
 }
+
 /* Container that holds all floating hero images */
 .hero-images {
   position: absolute;
@@ -80,6 +81,7 @@
   pointer-events: none; 
   z-index: -1;
 }
+
 
 
 

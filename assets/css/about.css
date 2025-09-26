@@ -1,0 +1,88 @@
+/* About Section */
+#about {
+  padding: 5rem 2rem;
+  max-width: 1200px;
+  margin: 0 auto;
+  text-align: left;
+}
+
+#about h2 {
+  font-size: 3rem; /* larger header */
+  margin-bottom: 2rem;
+  font-family: "Young Serif", serif;
+  color: #fff4c5;
+
+}
+
+/* Layout wrapper */
+.about-content {
+  display: grid;
+  grid-template-columns: 1fr auto 1fr; /* left - middle - right */
+  gap: 2rem;
+  align-items: start;
+}
+
+/* Text columns */
+.about-text {
+  font-family: "JetBrains Mono", monospace;
+  color: #fff4c5;
+  font-size: 1.1rem;
+  line-height: 1.6;
+}
+.about-text p {
+  margin-bottom: 1.2rem; /* spacing between paragraphs */
+}
+
+.about-text.left {
+  text-align: left;
+}
+
+.about-text.right {
+  text-align: right;
+  padding-top: 370px;
+}
+
+.about-images {
+  display: flex;
+  flex-direction: column;   /* still stacks */
+  align-items: center;      /* centers by default */
+  gap: 1rem;
+  position: relative;       /* so absolute children can be placed */
+}
+
+.about-images img {
+  width: 150px;  
+  height: auto;
+  object-fit: cover;
+  transition: transform 0.3s ease;
+}
+
+.about-images img.photobooth {
+  width: 250px;  
+}
+
+.about-images img.pho {
+  width: 190px;
+  position: absolute;   /* now top/left will work */
+  left: 190px;
+  top: 120px;
+}
+
+
+
+/* Responsive behavior */
+@media (max-width: 900px) {
+  .about-content {
+    grid-template-columns: 1fr; /* stack */
+    text-align: center;
+  }
+  .about-text.left,
+  .about-text.right {
+    text-align: center;
+  }
+  .about-images {
+    flex-direction: row;
+    justify-content: center;
+    margin: 1.5rem 0;
+  }
+}

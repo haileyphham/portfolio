@@ -9,6 +9,7 @@
 @import "hero.css";
 @import "button.css";
 @import "footer.css";
+@import "about.css";
 
 section {
   max-width: 1200px;   /* adjust to your design width */
