@@ -47,30 +47,69 @@ section {
 #contact a:hover {
   text-decoration: underline;
 }
+/* === Orb Glows === */
+
+/* Top orb (like a sun above hero) */
 .orb {
   position: absolute;
-  top: -400px;
-  left: 100px;
+  top: -400px;      /* push above hero */
+  left: 30%;        /* center horizontally */
+  transform: translateX(-50%);
   width: 700px;
   height: 700px;
   pointer-events: none;
-  z-index: 5;
+  z-index: -1;
 
   background: radial-gradient(
     circle,
-    rgba(255, 244, 197, 0.7) 0%,   /* bright center */
-    rgba(102, 204, 255, 0) 70%     /* fades to nothing */
+    rgba(255, 244, 197, 0.6) 0%,   /* bright center */
+    rgba(255, 244, 197, 0) 70%     /* fade to transparent */
   );
 }
+
+/* Right orb (cut vertically in half) */
 .orb-right {
-    position: absolute;
-  top: 450px;   /* adjust so it's between hero and about */
-  left: 1150px;
-  width: 800px;
-  height: 800px;
+  position: absolute;
+  top: 450px;      /* around between hero & about */
+    /* half cut off */
+  left: 1100px;
+  width: 600px;
+  height: 600px;
+  pointer-events: none;
+  z-index: -4;
+  overflow-x: hidden;
+
   background: radial-gradient(
     circle,
-    rgba(255, 244, 197, 0.7) 0%, /* softer cyan glow */
+    rgba(255, 244, 197, 0.6) 0%, 
     rgba(102, 204, 255, 0) 70%
   );
+}
+
+html , .orb-right{
+  overflow-x: hidden;
+}
+
+/* 📱 Tablets */
+@media (max-width: 1024px) {
+  .orb {
+    width: 55vw;
+    height: 55vw;
+    top: -20%;
+  }
+  .orb-right {
+    display: none;
+  }
+}
+
+/* 📱 Phones */
+@media (max-width: 600px) {
+  .orb {
+    width: 70vw;
+    height: 70vw;
+    top: -15%;
+  }
+  .orb-right {
+    display: none;
+  }
 }
