@@ -34,10 +34,24 @@
 
 
 /* 📱 Tablet and smaller */
+@media (max-width: 1023px) {
+  .oval-btn {
+    font-size: 1rem;
+    padding: 0.4rem 1.2rem; /* keep some vertical padding so text doesn’t look cramped */
+  }
+
+  .hero-buttons {
+    margin-top: 7rem; /* pushes the whole button group lower */
+  }
+}
 @media (max-width: 768px) {
   .oval-btn {
     font-size: 1rem;
-    padding: 0.5rem 1.2rem;
+    padding: 0.4rem 1.2rem; /* keep some vertical padding so text doesn’t look cramped */
+  }
+
+  .hero-buttons {
+    margin-top: 1rem; /* pushes the whole button group lower */
   }
 }
 
@@ -46,5 +60,8 @@
   .oval-btn {
     font-size: 0.5rem;
     padding: 0.4rem 1rem;
+  }
+  .hero-buttons {
+    margin-top: 1rem; /* pushes the whole button group lower */
   }
 }

@@ -98,17 +98,9 @@
   .hero-img { transform: scale(0.8); }
 }
 
-/* Phones (≤768px) */
-@media (max-width: 768px) {
-  .hero { padding-top: 6rem; }
-  .hero > p { font-size: 1rem; padding-right: 2rem; text-align: center; }
-  .hero h1 { font-size: 5rem; }
-  .tag { font-size: 1rem; padding: 0.4rem 1rem; }
-  .hero-img { transform: scale(0.6); }
-}
 
-/* Extra small (≤430px) – custom overrides */
-@media (max-width: 430px) {
+/* Extra small (≤768px) – custom overrides */
+@media (max-width: 768px) {
   .hero h1 { font-size: 3.5rem; }
   .tag { font-size: 0.9rem; }
 

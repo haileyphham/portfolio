@@ -9,3 +9,15 @@
 @import "hero.css";
 @import "button.css";
 @import "footer.css";
+
+section {
+  max-width: 1200px;   /* adjust to your design width */
+  margin: 0 auto;      /* centers the section horizontally */
+  padding: 2rem;       /* adds breathing space on smaller screens */
+  box-sizing: border-box;
+}
+body {
+  display: flex;
+  flex-direction: column;
+  align-items: center;   /* centers everything horizontally */
+}
