@@ -67,10 +67,21 @@
 .hero-img {
   position: absolute;
   height: auto;
-  z-index: 0;
   overflow: visible;
-  width: 200vw;   
 }
+/* Container that holds all floating hero images */
+.hero-images {
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;   /* fills full width of hero-header */
+  height: 100%;
+  overflow: visible;
+  pointer-events: none; 
+  z-index: -1;
+}
+
+
 
 /* left side */
 .hero-img.miffy { width: 120px; top: 210px; left: -400px; transform: scaleX(-1); }
